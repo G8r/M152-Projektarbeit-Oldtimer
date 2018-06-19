@@ -182,6 +182,31 @@ button{
     margin-left: 15px;
 }
 
+video{
+    width: 100%;
+    z-index: 100;
+}
+
+#bgvid {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #f0f0f0;
+    object-fit: cover;
+    z-index: -1;
+  }
+  
+.wrapper {
+    width: 100%;
+    min-width: 100%;
+    height: 445px;
+    max-height: 445px;
+    overflow: hidden;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAANklEQVQYlWNYtWqVMQMSWLVqlTE2MQZcAhiS+CQImoTVZGyKsComWiHRVpPkGVyewqsLV4ADAEr5TuVwzxgzAAAAAElFTkSuQmCC) repeat; 
+    background-position: left top;
+    background-repeat: repeat;
+}
+  
 
 /* footer  -----------------------------------------------------------------------------------------*/
 
