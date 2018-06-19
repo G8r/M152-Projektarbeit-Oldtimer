@@ -1,0 +1,245 @@
+/* general styles ---------------------------------------------------------------------------------------*/
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* navigation -------------------------------------------------------------------------------------------*/
+.nav-link{
+    color: white !important;
+    text-align: center;
+}
+
+#logo{
+    width: 90px;
+}
+
+.activeElement{
+    font-style: italic;
+}
+
+
+/* carousel ---------------------------------------------------------------------------------------------*/
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.carousel > img{
+    max-height: 550px;
+}
+
+/* underline navbar menu --------------------------------------------------------------------------------*/
+
+.navbar {
+    width: 100%;
+}
+
+.navbar .navbar-nav a {
+    color: #fefefe;
+    padding: 1.2rem 1.5rem;
+}
+
+.navbar .navbar-nav .underline-from-center {
+    position: relative;
+}
+
+.navbar .navbar-nav .underline-from-center::after {
+    content: "";
+    position: absolute;
+    top: calc(100% - 0.125rem);
+    border-bottom: 0.125rem solid #fefefe;
+    left: 50%;
+    right: 50%;
+    transition: all 0.5s ease;
+}
+
+.navbar .navbar-nav .underline-from-center:hover::after {
+    left: 0;
+    right: 0;
+    transition: all 0.5s ease;
+}
+
+/* button animation ------------------------------------------------------------------------------------*/ 
+
+button{
+    background:#2A81FF;
+    color:#fff;
+    border:none;
+    position:relative;
+    height: 40px;
+    font-size: 1em;
+    padding: 0 2em;
+    cursor:pointer;
+    transition:800ms ease all;
+    outline:none;
+  }
+  button:hover{
+    background:#fff;
+    color:#2A81FF;
+  }
+  button:before,button:after{
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    height:2px;
+    width:0;
+    background: #2A81FF;
+    transition:400ms ease all;
+  }
+  button:after{
+    right:inherit;
+    top:inherit;
+    left:0;
+    bottom:0;
+  }
+  button:hover:before,button:hover:after{
+    width:100%;
+    transition:800ms ease all;
+  }
+
+  /* flipping card -----------------------------------------------------------------------------------*/
+
+  .card-flip {
+    -webkit-perspective: 1000px;
+            perspective: 1000px;
+  }
+  .card-flip:hover .flip, .card-flip.hover .flip {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+  }
+  
+  .card-flip,
+  .front,
+  .back {
+    width: 100%;
+    height: 480px;
+  }
+  
+  .flip {
+    transition: 0.6s;
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+    position: relative;
+  }
+  
+  .front,
+  .back {
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .front {
+    z-index: 2;
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+  
+  .back {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+  }
+
+
+  /* details-pages  -----------------------------------------------------------------------------------------*/
+
+  audio{
+    float:left;
+    margin-bottom: 50px;
+  }
+
+  .add-to-favorite{
+    float: right;
+    font-size: 0.8em;
+    line-height: 3.5em;
+  }
+
+  #heart{
+    font-size: 1.5em;
+  }
+
+  .price{
+    margin: 40px 0 0 0;
+  }
+
+/* index page  -----------------------------------------------------------------------------------------*/
+.card-img-top{
+    height: 15vw;
+    object-fit: cover;
+}
+
+.btnAllCars{
+    float: right;
+    margin-right: 50px;
+}
+
+.arrow{
+    margin-left: 15px;
+}
+
+
+/* footer  -----------------------------------------------------------------------------------------*/
+
+  .fa-angle-double-up{
+      font-size: 2em;
+  }
+
+
+@media (max-width: 767px){
+    .card-img-top{
+        height: 60vw;
+    }
+
+    .price{
+        float: none;
+    }
+}
+
+@media (min-width: 992px){
+    .nav-link{
+        text-align: left;
+    }
+
+    .navbar-nav{
+        margin-left: auto !important;
+        padding-right: 75px;
+    }
+
+    .navbar-default .navbar-toggle .icon-bar {
+        background-color: #f00; /* Changes regular toggle color */
+      }
+      .navbar-default .navbar-toggle .icon-bar:hover {
+        background-color: #fff; /* Changes toggle color on hover */
+      }
+
+    #favorites{
+        position: fixed;
+        right: 20px;
+        font-size: 24px;
+        padding: 0.8rem 1.3rem;        
+    }
+
+    .carousel-inner{
+        max-height: 550px;
+        max-width: 1080px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .center {
+        width: 70%;
+    }
+
+    .audio-container{
+        margin-top: 50px;
+      }
+
+    .price{
+        float: right;
+    }
+}
